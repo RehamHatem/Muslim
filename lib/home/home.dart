@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:islami_app/home/taps/quran.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routName = "home";
@@ -32,6 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 fontSize: 30, fontWeight: FontWeight.w700, color: Colors.black),
           ),
         ),
+        body: taps[index],
 
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: index,
@@ -59,4 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+  List<Widget>taps=[
+    Quraan(),
+  ];
 }
