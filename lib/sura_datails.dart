@@ -48,9 +48,9 @@ class _SuraDetailsState extends State<SuraDetails> {
           child: ListView.separated(
             separatorBuilder: (context, index) {
               return Divider(
-                thickness: 1,
+                thickness: 1.5,
                 indent: 50,
-                endIndent: 50,
+                endIndent: 50,color: Color(0xffB7935F),
               );
             },
             itemBuilder: (context, index) {
@@ -63,7 +63,7 @@ class _SuraDetailsState extends State<SuraDetails> {
                 ),
               );
             },
-            itemCount: verses.length - 1,
+            itemCount: verses.length ,
           ),
         ),
       ),
@@ -74,7 +74,7 @@ class _SuraDetailsState extends State<SuraDetails> {
     String sura = await rootBundle.loadString("assets/files/${index + 1}.txt");
     List<String> suraLine = sura.split("\n");
     verses = suraLine;
-    print(verses);
+    // print(verses);
     setState(() {});
   }
 }

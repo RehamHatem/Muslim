@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:islami_app/home/taps/hadeth.dart';
 import 'package:islami_app/home/taps/quran.dart';
+import 'package:islami_app/home/taps/tsbeeh.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routName = "home";
@@ -36,15 +38,15 @@ class _HomeScreenState extends State<HomeScreen> {
         body: taps[index],
 
         bottomNavigationBar: BottomNavigationBar(
-          currentIndex: index,
-          onTap: (value) {
-            index=value;
-            setState(() {
+            currentIndex: index,
+            onTap: (value) {
+              index=value;
+              setState(() {
 
-            });
+              });
 
-          },
-          backgroundColor: Color(0xffB7935F),
+            },
+            backgroundColor: Color(0xffB7935F),
             showUnselectedLabels: false,
             showSelectedLabels: false,
             selectedItemColor: Colors.black,
@@ -52,16 +54,17 @@ class _HomeScreenState extends State<HomeScreen> {
             type: BottomNavigationBarType.fixed,
             iconSize: 30,
             items: [
-          BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/icon_quran.png")),label: ""),
-          BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/icon_sebha.png")),label: ""),
-          BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/icon_hadeth.png")),label: ""),
-          BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/icon_radio.png")),label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: "rr"),
-        ]),
+              BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/icon_quran.png")),label: ""),
+              BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/icon_sebha.png")),label: ""),
+              BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/icon_hadeth.png")),label: ""),
+              BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/icon_radio.png")),label: ""),
+              BottomNavigationBarItem(icon: Icon(Icons.settings), label: "rr"),
+            ]),
       ),
     );
   }
   List<Widget>taps=[
     Quraan(),
+    Tasbeh(),
   ];
 }
