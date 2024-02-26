@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:islami_app/home/taps/hadeth.dart';
+import 'package:islami_app/home/taps/radio.dart';
 import 'package:islami_app/home/taps/tsbeeh.dart';
 import 'package:islami_app/sura_datails.dart';
 
@@ -19,7 +19,8 @@ class myApp extends StatelessWidget{
       routes: {
         HomeScreen.routName: (context)=>HomeScreen(),
         SuraDetails.routeName:(context) => SuraDetails(),
-        Tasbeh.routName:(context) => Tasbeh()
+        Tasbeh.routName:(context) => Tasbeh(),
+        redio.routeName:(context) => redio(),
       },
     );
   }
