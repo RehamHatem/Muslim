@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/sura_model.dart';
 
 import '../../sura_datails.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Quraan extends StatelessWidget {
   const Quraan({super.key});
@@ -140,12 +141,12 @@ class Quraan extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text("عدد الآيات",
+              Text(AppLocalizations.of(context)!.ayaNumber,
                   style: GoogleFonts.elMessiri(
                       color: Colors.black,
                       fontSize: 25,
                       fontWeight: FontWeight.w600)),
-              Text("اسم السورة",
+              Text(AppLocalizations.of(context)!.suraName,
                   style: GoogleFonts.elMessiri(
                       color: Colors.black,
                       fontSize: 25,

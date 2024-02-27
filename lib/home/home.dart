@@ -3,7 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/home/taps/hadeth.dart';
 import 'package:islami_app/home/taps/quran.dart';
 import 'package:islami_app/home/taps/radio.dart';
+import 'package:islami_app/home/taps/settings_tap.dart';
 import 'package:islami_app/home/taps/tsbeeh.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class HomeScreen extends StatefulWidget {
   static const String routName = "home";
@@ -31,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Colors.transparent,
           elevation: 0,
           title: Text(
-            "إسلامي",
+            AppLocalizations.of(context)!.appName,
             style: GoogleFonts.elMessiri(
                 fontSize: 30, fontWeight: FontWeight.w700, color: Colors.black),
           ),
@@ -69,5 +72,6 @@ class _HomeScreenState extends State<HomeScreen> {
     Tasbeh(),
     Ahadeth(),
     redio(),
+    Settings(),
   ];
 }

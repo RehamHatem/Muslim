@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class redio extends StatelessWidget {
   static const String routeName="rad";
@@ -14,7 +16,7 @@ class redio extends StatelessWidget {
           width: 412, height: 222,
             margin: EdgeInsets.only(top: 150,bottom: 40),
             child: Image(image: AssetImage("assets/images/radio_image.png"))),
-        Text("إذاعة القرآن الكريم",style: GoogleFonts.elMessiri(
+        Text(AppLocalizations.of(context)!.ezaah,style: GoogleFonts.elMessiri(
           fontSize: 25,
           fontWeight: FontWeight.w600,
           color: Color(0xff242424)
