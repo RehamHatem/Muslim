@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/home/hadeeth_datais.dart';
 import 'package:islami_app/home/hadeeth_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Ahadeth extends StatefulWidget {
   static const String routeName="hadeeth";
@@ -25,7 +26,7 @@ List<HadeethModel>All=[];
         Center(child: Image(image: AssetImage("assets/images/hadeth_logo.png"))),
         Divider(thickness: 3,
         color: Color(0xffB7935F),),
-        Text("الأحاديث",style: GoogleFonts.elMessiri(fontSize: 25,fontWeight: FontWeight.w600,)),
+        Text(AppLocalizations.of(context)!.hadeethName,style: GoogleFonts.elMessiri(fontSize: 25,fontWeight: FontWeight.w600,)),
         Divider(thickness: 3,
           color: Color(0xffB7935F),),
 

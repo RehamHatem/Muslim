@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_app/theme_data.dart';
 
 class Tasbeh extends StatefulWidget {
   static const String routName = "tasbeeh";
@@ -55,11 +57,8 @@ class _TasbehState extends State<Tasbeh> {
             ],
           ),
           Text(
-            "عدد التسبيحات",
-            style: GoogleFonts.elMessiri(
-                fontSize: 25,
-                fontWeight: FontWeight.w600,
-                color: Color(0xff242424)),
+            AppLocalizations.of(context)!.tasbeehNum,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
           SizedBox(
             height: 30,
@@ -69,14 +68,11 @@ class _TasbehState extends State<Tasbeh> {
             height: 81,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: Color(0xffB7935F),
+                color: MyThemeData.primaryColor,
                 borderRadius: BorderRadius.circular(25)),
             child: Text(
               "${count}",
-              style: GoogleFonts.inter(
-                fontWeight: FontWeight.w400,
-                fontSize: 25,
-              ),
+              style:Theme.of(context).textTheme.bodyMedium
             ),
           ),
           SizedBox(
@@ -87,14 +83,11 @@ class _TasbehState extends State<Tasbeh> {
             height: 51,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: Color(0xffB7935F),
+                color:  MyThemeData.primaryColor,
                 borderRadius: BorderRadius.circular(25)),
             child: Text(
               "${tasbehaName[counter]}",
-              style: GoogleFonts.inter(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 25,
-                  color: Colors.white),
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           )
         ],
