@@ -4,6 +4,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/providers/setting_provider.dart';
 import 'package:provider/provider.dart';
 
+import '../theme_data.dart';
+
 class LaguageSheet extends StatelessWidget {
   const LaguageSheet({super.key});
 
@@ -27,12 +29,12 @@ class LaguageSheet extends StatelessWidget {
                   fontSize: 30,
                   fontWeight: FontWeight.w600,
 
-                  color: prov.langCode=="ar"? Color(0xffB7935F): Colors.black,
+                  color: prov.langCode=="ar"? MyThemeData.primaryColor: MyThemeData.secondaryColor,
 
                 ),),
               ),
               Spacer(),
-              Icon(Icons.done,size: 30,color: prov.langCode=="ar"? Color(0xffB7935F): Colors.transparent),
+              Icon(Icons.done,size: 30,color: prov.langCode=="ar"? MyThemeData.primaryColor: Colors.transparent),
             ],
           ),
         ),
@@ -47,13 +49,13 @@ class LaguageSheet extends StatelessWidget {
                 child: Text(AppLocalizations.of(context)!.en,style: GoogleFonts.elMessiri(
                   fontSize: 30,
                   fontWeight: FontWeight.w600,
-                  color: prov.langCode=="ar"? Colors.black : Color(0xffB7935F),
+                  color: prov.langCode=="ar"? MyThemeData.secondaryColor : MyThemeData.primaryColor,
 
                 ),),
               ),
               Spacer(),
 
-              Icon(Icons.done,size: 30,color: prov.langCode=="ar"? Colors.transparent : Color(0xffB7935F)),
+              Icon(Icons.done,size: 30,color: prov.langCode=="ar"? Colors.transparent : MyThemeData.primaryColor),
             ],
           ),
         ),

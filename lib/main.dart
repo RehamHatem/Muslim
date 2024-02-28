@@ -13,6 +13,8 @@ import 'home/home.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import 'theme_data.dart';
+
 void main (){
   runApp(ChangeNotifierProvider<MyProvider>(
       create: (context) => MyProvider(),
@@ -26,6 +28,9 @@ class myApp extends StatelessWidget{
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       locale: Locale(provider.langCode),
+      theme: MyThemeData.light,
+      darkTheme:MyThemeData.dark ,
+      themeMode: provider.mood,
       debugShowCheckedModeBanner: false,
       initialRoute: HomeScreen.routName ,
       routes: {

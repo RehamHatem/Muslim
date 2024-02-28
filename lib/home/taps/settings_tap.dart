@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/sheets/language.dart';
 import 'package:islami_app/sheets/mood.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_app/theme_data.dart';
 
 
 class Settings extends StatelessWidget {
@@ -42,12 +43,9 @@ class Settings extends StatelessWidget {
                 width: 300,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
-                    border: Border.all(color: Color(0xffB7935F), width: 2)),
+                    border: Border.all(color: MyThemeData.primaryColor, width: 2)),
                 child: Text("عربي",
-                    style: GoogleFonts.elMessiri(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w300,
-                    )),
+                    style: Theme.of(context).textTheme.bodySmall),
               ),
             ),
             SizedBox(height: 30,),
@@ -74,12 +72,9 @@ class Settings extends StatelessWidget {
                 width: 300,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
-                    border: Border.all(color: Color(0xffB7935F), width: 2)),
+                    border: Border.all(color: MyThemeData.primaryColor, width: 2)),
                 child: Text("فاتح",
-                    style: GoogleFonts.elMessiri(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w300,
-                    )),
+                    style: Theme.of(context).textTheme.bodySmall,),
               ),
             ),
           ],
