@@ -1,0 +1,15 @@
+{
+  "appName": "Islami",
+  "suraName": "Sura",
+  "hadeethName": "Ahadeeth",
+  "ayaNumber": "Ayat",
+  "language": "Language",
+  "mood": "Mood",
+  "ar": "Arabic",
+  "en": "English",
+  "tasbeehNum": "Tasbehat number",
+  "ezaah": "Ezaat al-quraan al-kareem",
+  "fateh": "Light",
+  "dakn": "Dark"
+
+}

@@ -3,7 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/home/taps/hadeth.dart';
 import 'package:islami_app/home/taps/quran.dart';
 import 'package:islami_app/home/taps/radio.dart';
+import 'package:islami_app/home/taps/settings_tap.dart';
 import 'package:islami_app/home/taps/tsbeeh.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_app/providers/setting_provider.dart';
+import 'package:provider/provider.dart';
+
 
 class HomeScreen extends StatefulWidget {
   static const String routName = "home";
@@ -18,22 +23,18 @@ class _HomeScreenState extends State<HomeScreen> {
   int index=0;
   @override
   Widget build(BuildContext context) {
-
+var provider=Provider.of<MyProvider>(context);
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/images/default_bg.png"),
+              image: AssetImage(provider.getBackgroundImagePath()),
               fit: BoxFit.fill)),
       child: Scaffold(
-        backgroundColor: Colors.transparent,
+
         appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Colors.transparent,
-          elevation: 0,
+
           title: Text(
-            "إسلامي",
-            style: GoogleFonts.elMessiri(
-                fontSize: 30, fontWeight: FontWeight.w700, color: Colors.black),
+            AppLocalizations.of(context)!.appName,
           ),
         ),
         body: taps[index],
@@ -47,12 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
               });
 
             },
-            backgroundColor: Color(0xffB7935F),
-            showUnselectedLabels: false,
-            showSelectedLabels: false,
-            selectedItemColor: Colors.black,
-            unselectedItemColor: Colors.white,
-            type: BottomNavigationBarType.fixed,
+
             iconSize: 30,
             items: [
               BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/icon_quran.png")),label: ""),
@@ -69,5 +65,6 @@ class _HomeScreenState extends State<HomeScreen> {
     Tasbeh(),
     Ahadeth(),
     redio(),
+    Settings(),
   ];
 }
