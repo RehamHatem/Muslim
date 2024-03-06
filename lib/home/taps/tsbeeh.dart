@@ -14,6 +14,7 @@ class Tasbeh extends StatefulWidget {
 
 class _TasbehState extends State<Tasbeh> {
   int count = 0;
+  double ang=0.0;
 
   List<String> tasbehaName = [
     "سبحان الله",
@@ -42,16 +43,19 @@ class _TasbehState extends State<Tasbeh> {
                   )),
               InkWell(
                 onTap: () {
-
                   checkCount();
+                  ang+=.5;
                   setState(() {});
                 },
                 child: Container(
                   height: 234,
                   width: 232,
                   margin: EdgeInsets.only(bottom: 50, top: 70),
-                  child: Image(
-                      image: AssetImage("assets/images/body_sebha_logo.png")),
+                  child: Transform.rotate(
+                    angle: ang,
+                    child: Image(
+                        image: AssetImage("assets/images/body_sebha_logo.png")),
+                  ),
                 ),
               )
             ],
