@@ -4,6 +4,9 @@ import 'package:islami_app/sheets/language.dart';
 import 'package:islami_app/sheets/mood.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/theme_data.dart';
+import 'package:provider/provider.dart';
+
+import '../../providers/setting_provider.dart';
 
 
 class Settings extends StatelessWidget {
@@ -13,6 +16,7 @@ class Settings extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var prov = Provider.of<MyProvider>(context);
     return Padding(
         padding: const EdgeInsets.all(32.0),
         child: Column(
@@ -44,7 +48,7 @@ class Settings extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     border: Border.all(color: MyThemeData.primaryColor, width: 2)),
-                child: Text("عربي",
+                child: Text("${prov.langCode=="en"? AppLocalizations.of(context)!.en:AppLocalizations.of(context)!.ar}",
                     style: Theme.of(context).textTheme.bodySmall),
               ),
             ),
@@ -73,7 +77,7 @@ class Settings extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     border: Border.all(color: MyThemeData.primaryColor, width: 2)),
-                child: Text("فاتح",
+                child: Text("${prov.mood=="light"? AppLocalizations.of(context)!.dakn:AppLocalizations.of(context)!.fateh}",
                     style: Theme.of(context).textTheme.bodySmall,),
               ),
             ),

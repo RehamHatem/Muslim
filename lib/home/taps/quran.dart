@@ -141,10 +141,9 @@ class Quraan extends StatelessWidget {
             color: MyThemeData.primaryColor,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(AppLocalizations.of(context)!.ayaNumber,
-                  style: Theme.of(context).textTheme.bodyMedium),
+
               Text(AppLocalizations.of(context)!.suraName,
                   style: Theme.of(context).textTheme.bodyMedium),
             ],
