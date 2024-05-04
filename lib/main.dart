@@ -10,7 +10,6 @@ import 'package:islami_app/sura_datails.dart';
 import 'package:provider/provider.dart';
 
 import 'home/home.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'theme_data.dart';
