@@ -41,7 +41,7 @@ class _SuraDetailsState extends State<SuraDetails> {
           padding: EdgeInsets.all(12),
           margin: EdgeInsets.all(20),
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(25) ),
+              color: provider.mood=="light"?Colors.white:Colors.white.withOpacity(.5), borderRadius: BorderRadius.circular(25) ),
           child: ListView.separated(
             separatorBuilder: (context, index) {
               return Divider(
