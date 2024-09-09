@@ -51,7 +51,7 @@ class _redioState extends State<redio> {
                 margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*.05,bottom: MediaQuery.of(context).size.height*.005),
                 child: Image(image: AssetImage("assets/images/radio_image.png"))),
             SizedBox(
-              height: MediaQuery.of(context).size.height*.2,
+              height: MediaQuery.of(context).size.height*.4,
               child: ListView.builder(itemBuilder: (context, index) {
 
                 return RadioItem(radios: snapshot.data![index],audioPlayer: audioPlayer,);

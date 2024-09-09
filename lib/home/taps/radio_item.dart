@@ -38,7 +38,7 @@ class _RadioItemState extends State<RadioItem> {
               });
             },icon: Icon(Icons.pause,size: 50),color:  MyThemeData.primaryColor),
           ],
-        )
+        ),
       ],
     );
   }
